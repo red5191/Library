@@ -38,6 +38,28 @@ def remove_book(title):
     else:
         print('Такой книги в библиотеке не числится')
 
+
+def issue_book(title):
+    if title in library:
+        book = library[title]
+        book['availability'] = False
+        print(f'Книга {title} выдана')
+    else:
+        print('Такой книги в библиотеке не числится')
+
+
+def return_book(title):
+    if title in library:
+        book = library[title]
+        book['availability'] = True
+        print(f'Книга {title} возвращена')
+    else:
+        print('Такой книги в библиотеке не числится')
+
+
 book_list_view(library)
 add_book('Dune', 'utvjhvb', 2023)
 remove_book('Kolobok')
+
+issue_book('Wiedzmin')
+return_book('Wiedzmin')
