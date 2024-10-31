@@ -12,7 +12,7 @@ def book_list_view(library):
         book_list = 'Библиотека пуста'
     else:
         book_list = list(library.keys())
-    print(f'В библиотеке числятся следующие наименования: {book_list}')
+    print(f'В библиотеке числятся следующие наименования: {(', '.join(book_list))}')
     return book_list
 
 
@@ -31,4 +31,5 @@ def add_book(title, author, year):
         print(f'Данные по книге {title} успешно добавлены')
 
 
+book_list_view(library)
 add_book('Dune', 'utvjhvb', 2023)
