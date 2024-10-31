@@ -41,8 +41,7 @@ def remove_book(title):
 
 def issue_book(title):
     if title in library:
-        book = library[title]
-        book['availability'] = False
+        library[title]['availability'] = False
         print(f'Книга {title} выдана')
     else:
         print('Такой книги в библиотеке не числится')
@@ -50,8 +49,7 @@ def issue_book(title):
 
 def return_book(title):
     if title in library:
-        book = library[title]
-        book['availability'] = True
+        library[title]['availability'] = True
         print(f'Книга {title} возвращена')
     else:
         print('Такой книги в библиотеке не числится')
