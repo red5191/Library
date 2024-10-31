@@ -11,14 +11,12 @@ def book_list_view(library):
         book_list = 'Библиотека пуста'
     else:
         book_list = list(library.keys())
+    print(f'В библиотеке числятся следующие наименования: {book_list}')
     return book_list
 
 
-def add_book():
+def add_book(title, author, year):
     print('Добавляем книгу')
-    title = input('Укажите название ')
-    author = input('Укажите автора ')
-    year = input('Укажите год ')
     if title in library:
         refresh = input('Обновить информацию? ').lower()
         while refresh not in correct:
@@ -32,6 +30,6 @@ def add_book():
         print(f'Данные по книге {title} успешно добавлены')
 
 
-print(f'В библиотеке числятся следующие наименования: {book_list_view(library)}')
 
-add_book()
+
+add_book('Dune')
