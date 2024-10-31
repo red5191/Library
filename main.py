@@ -31,4 +31,4 @@ def add_book(title, author, year):
         print(f'Данные по книге {title} успешно добавлены')
 
 
-add_book('Dune')
+add_book('Dune', 'utvjhvb', 2023)
