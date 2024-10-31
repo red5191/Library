@@ -31,5 +31,13 @@ def add_book(title, author, year):
         print(f'Данные по книге {title} успешно добавлены')
 
 
+def remove_book(title):
+    if title in library:
+        library.pop(title)
+        print(f'Книга {title} успешно удалена')
+    else:
+        print('Такой книги в библиотеке не числится')
+
 book_list_view(library)
 add_book('Dune', 'utvjhvb', 2023)
+remove_book('Kolobok')
