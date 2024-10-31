@@ -6,6 +6,7 @@ library = {
 
 correct = ['да', 'нет']
 
+
 def book_list_view(library):
     if not library:
         book_list = 'Библиотека пуста'
@@ -23,13 +24,11 @@ def add_book(title, author, year):
             print('Пожалуйста используйте для ответа \"да\" или \"нет\"')
             refresh = input('Обновить информацию? ').lower()
         if refresh == 'да':
-            library[title] = {'author' : author, 'year' : year, 'availability' : None}
+            library[title] = {'author': author, 'year': year, 'availability': None}
             print(f'Данные по книге {title} успешно обновлены')
     else:
-        library[title] = {'author' : author, 'year' : year, 'availability' : None}
+        library[title] = {'author': author, 'year': year, 'availability': None}
         print(f'Данные по книге {title} успешно добавлены')
-
-
 
 
 add_book('Dune')
