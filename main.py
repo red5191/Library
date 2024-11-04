@@ -61,9 +61,19 @@ def return_book(title):
         print('Такой книги в библиотеке не числится')
 
 
+def find_book(title):
+    if title in library:
+        book = library[title]
+        print(f'Книга {title} за авторством {book['author']}, {book['year']}-го года выпуска числится в библиотеке')
+    else:
+        print('Такой книги в библиотеке не числится')
+
+
 book_list_view(library)
 add_book('Dune', 'utvjhvb', 2023)
 remove_book('Kolobok')
 
 issue_book('Wiedzmin')
 return_book('Wiedzmin')
+
+find_book('Wiedźmin')
