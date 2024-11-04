@@ -1,7 +1,16 @@
 library = {
-    'Dune': {'author': 'Franklin Patrick Herbert', 'year': 1965, 'availability': True},
-    'Kolobok': {'author': 'Tolstoy Alexey Nikolaevich', 'year': 1941, 'availability': False},
-    'Wiedzmin': {'author': 'Andrzej Sapkowski', 'year': 1986, 'availability': None}
+    'Dune': {
+        'author': 'Franklin Patrick Herbert', 
+        'year': 1965, 
+        'availability': True},
+    'Kolobok': {
+        'author': 'Tolstoy Alexey Nikolaevich', 
+        'year': 1941, 
+        'availability': False},
+    'Wiedzmin': {
+        'author': 'Andrzej Sapkowski', 
+        'year': 1986, 
+        'availability': None}
 }
 
 correct = ['да', 'нет']
@@ -65,6 +74,12 @@ def find_book(title):
     if title in library:
         book = library[title]
         print(f'Книга {title} за авторством {book['author']}, {book['year']}-го года выпуска числится в библиотеке')
+        if book['availability'] is True:
+            print('Книга доступна')
+        if book['availability'] is False:
+            print('Книга выдана')
+        if book['availability'] is None:
+            print('Книга в библиотеке, но ее статус не определен')
     else:
         print('Такой книги в библиотеке не числится')
 
